@@ -1,18 +1,23 @@
-= Idea Zone =
+Idea Zone
+=========
 
 Idea Zone is an iPhone application that lets you jot down notes
 and have them immediately synced to Dropbox. 
 
 App URL: https://itunes.apple.com/us/app/idea-zone/id795927539
 
-== Open Source ==
+Open Source
+-----------
+
 I've scrubbed the credentials from "AIBConstants.cpp" - you'll
 have to create your own Dropbox app and plop them in.
 
 This project also uses Cocoapods for dependency management.
 Use `pod install` to install everything required.
 
-== License == 
+License
+-------
+
 Copyright 2014 Thomas Dimson
 
 Licensed under the Apache License, Version 2.0 (the "License");
