@@ -7,12 +7,35 @@
 //
 
 #import "AIBAppDelegate.h"
+#import "AIBConstants.h"
+#import "Dropbox/Dropbox.h"
+//#import <TestFlight.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AIBAppDelegate
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+        sourceApplication:(NSString *)sourceApplication
+               annotation:(id)annotation {
+    if([sourceApplication isEqualToString:@"com.getdropbox.Dropbox"]) {
+        DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAIBDropboxOpenURLOccurred object:nil];
+        if(account) {
+            return YES;
+        }
+        return NO;
+    }
+
+    return NO;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    DBAccountManager *accountManager = [[DBAccountManager alloc]
+            initWithAppKey:kAIBDropboxApiKey secret:kAIBDropboxApiSecret];
+    [DBAccountManager setSharedManager:accountManager];
+    //[TestFlight takeOff:kAIBTestflightApiKey];
+    [Crashlytics startWithAPIKey:kAIBCrashlyticsKey];
     return YES;
 }
 							

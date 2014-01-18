@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B03280A1872981D000E9C29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0328091872981D000E9C29 /* MessageUI.framework */; };
+		2B03280D187349F1000E9C29 /* AIBIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03280C187349F1000E9C29 /* AIBIdeaViewController.m */; };
+		2B0BBDBC186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BBDBB186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m */; };
+		2B2184911881DEC3002B09A0 /* AIBEditIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2184901881DEC3002B09A0 /* AIBEditIdeaViewController.m */; };
+		2B35B6D61882504B008A52D8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B35B6D51882504B008A52D8 /* Crashlytics.framework */; };
+		2B53173D187221360032F502 /* AIBConfigureIdeaZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B53173C187221360032F502 /* AIBConfigureIdeaZoneViewController.m */; };
+		2B5363821870C9EA0000290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5363811870C9EA0000290C /* CoreLocation.framework */; };
+		2B5363851870E4960000290C /* AIBIdeaCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5363841870E4960000290C /* AIBIdeaCommentController.m */; };
+		2BA8C5B6186A550D005760AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B5186A550D005760AD /* Foundation.framework */; };
+		2BA8C5B8186A550D005760AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B7186A550D005760AD /* CoreGraphics.framework */; };
+		2BA8C5BA186A550D005760AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B9186A550D005760AD /* UIKit.framework */; };
+		2BA8C5C0186A550D005760AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8C5BE186A550D005760AD /* InfoPlist.strings */; };
+		2BA8C5C2186A550D005760AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA8C5C1186A550D005760AD /* main.m */; };
+		2BA8C5C6186A550D005760AD /* AIBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA8C5C5186A550D005760AD /* AIBAppDelegate.m */; };
+		2BA8C5C9186A550D005760AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8C5C7186A550D005760AD /* Main.storyboard */; };
+		2BA8C5CE186A550E005760AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8C5CD186A550E005760AD /* Images.xcassets */; };
+		2BA8C5D5186A550E005760AD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5D4186A550E005760AD /* XCTest.framework */; };
+		2BA8C5D6186A550E005760AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B5186A550D005760AD /* Foundation.framework */; };
+		2BA8C5D7186A550E005760AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B9186A550D005760AD /* UIKit.framework */; };
+		2BA8C5DF186A550E005760AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8C5DD186A550E005760AD /* InfoPlist.strings */; };
+		2BA8C5E1186A550E005760AD /* Idea_BoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA8C5E0186A550E005760AD /* Idea_BoxTests.m */; };
+		2BCE0D5C18791BC000B83540 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCE0D5B18791BC000B83540 /* MobileCoreServices.framework */; };
+		2BF0971E186BABC600AD681B /* AIBIdeaZonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0971D186BABC600AD681B /* AIBIdeaZonesViewController.m */; };
+		A3AF97B74A714AD1A8E0F2C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4409F7B0277E45588100AAA7 /* libPods.a */; };
+		A8F26045EC9F5C6CAEAC8721 /* AIBIdea.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26B18FD9CE3F176E2168B /* AIBIdea.m */; };
+		A8F2604E76FFFF5A1AFDAC13 /* UINavigationBar+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2672AFB150869B60D3CA6 /* UINavigationBar+AIBExtensions.m */; };
+		A8F262390ED40CB65BA5F3F6 /* AIBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26B302038EBB330279E9B /* AIBConstants.m */; };
+		A8F26249DBFECB69B47A8F85 /* AIBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F261299865684C1AB37B0C /* AIBViewController.m */; };
+		A8F2628CDFFD5139A75C7F16 /* NSDate+AIBFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F262C15A5F271F33FF1B4B /* NSDate+AIBFormatting.m */; };
+		A8F26373AD2DB28A38843B62 /* AIBIdeaZoneIdeaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2628B2B02E7828B5BE0B6 /* AIBIdeaZoneIdeaTableViewCell.m */; };
+		A8F265A67421797B48B069D6 /* AIBIdeaZoneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F264B9B8AEEE3ADEA5CD70 /* AIBIdeaZoneManager.m */; };
+		A8F265D5D4AD9F32E259F485 /* AIBAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26F45923FDE0DC631B664 /* AIBAlerts.m */; };
+		A8F267626A5364D0D832B868 /* AIBIdeaZonesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26601C2FD51DF4DEEA375 /* AIBIdeaZonesTableViewCell.m */; };
+		A8F2679FE5A15676EF2C088A /* AIBIdeaComment.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2677CDAF7D84B248DF4F6 /* AIBIdeaComment.m */; };
+		A8F2686EB8AEF4EADB1AACBD /* AIBIdeaDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F264E66A684EE638AB3507 /* AIBIdeaDescriptor.m */; };
+		A8F268716A26E4C01F29261A /* AIBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F265013A9A6CD71273CD27 /* AIBAnimation.m */; };
+		A8F268D8EE80807232B86803 /* UIColor+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26A2B254FFC69CB5681FA /* UIColor+AIBExtensions.m */; };
+		A8F26904983A8F9760140B35 /* AIBPathViewStates.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2684414ABC434D4E5D058 /* AIBPathViewStates.m */; };
+		A8F26A416517070A2D19D0D1 /* AIBIdeaZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F267E2B486E11CAC5A9F14 /* AIBIdeaZoneViewController.m */; };
+		A8F26B9C5CFF84C69FB2890B /* AIBIdeaZoneDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26C89CC356A273980AAC3 /* AIBIdeaZoneDescriptor.m */; };
+		A8F26C4C3BF5DFEFDEE4437A /* UIScreen+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26CD4D27473304A141571 /* UIScreen+AIBExtensions.m */; };
+		A8F26CA1006E39FA5609E2AA /* UIImage+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26601E44255C49CFFE465 /* UIImage+AIBExtensions.m */; };
+		A8F26D0C3E5B29F0921FFB28 /* AIBCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26B39D523954DBD46F89F /* AIBCommentView.m */; };
+		A8F26FC222DE1D55E42E13FF /* AIBIdeaZone.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26DB1CDBAF3A87078C3CF /* AIBIdeaZone.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BA8C5D8186A550E005760AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA8C5AA186A550D005760AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA8C5B1186A550D005760AD;
+			remoteInfo = "Idea Box";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B0328091872981D000E9C29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2B03280B187349F1000E9C29 /* AIBIdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaViewController.h; sourceTree = "<group>"; };
+		2B03280C187349F1000E9C29 /* AIBIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaViewController.m; sourceTree = "<group>"; };
+		2B0BBDBA186F7C8A00EF0B6E /* AIBCreateIdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBCreateIdeaViewController.h; sourceTree = "<group>"; };
+		2B0BBDBB186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBCreateIdeaViewController.m; sourceTree = "<group>"; };
+		2B21848F1881DEC3002B09A0 /* AIBEditIdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBEditIdeaViewController.h; sourceTree = "<group>"; };
+		2B2184901881DEC3002B09A0 /* AIBEditIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBEditIdeaViewController.m; sourceTree = "<group>"; };
+		2B35B6D51882504B008A52D8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		2B53173B187221360032F502 /* AIBConfigureIdeaZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBConfigureIdeaZoneViewController.h; sourceTree = "<group>"; };
+		2B53173C187221360032F502 /* AIBConfigureIdeaZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBConfigureIdeaZoneViewController.m; sourceTree = "<group>"; };
+		2B5363811870C9EA0000290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2B5363831870E4960000290C /* AIBIdeaCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaCommentController.h; sourceTree = "<group>"; };
+		2B5363841870E4960000290C /* AIBIdeaCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaCommentController.m; sourceTree = "<group>"; };
+		2BA8C5B2186A550D005760AD /* Idea Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Idea Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA8C5B5186A550D005760AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2BA8C5B7186A550D005760AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2BA8C5B9186A550D005760AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2BA8C5BD186A550D005760AD /* Idea Zone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Idea Zone-Info.plist"; sourceTree = "<group>"; };
+		2BA8C5BF186A550D005760AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BA8C5C1186A550D005760AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BA8C5C3186A550D005760AD /* Idea Zone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Idea Zone-Prefix.pch"; sourceTree = "<group>"; };
+		2BA8C5C4186A550D005760AD /* AIBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIBAppDelegate.h; sourceTree = "<group>"; };
+		2BA8C5C5186A550D005760AD /* AIBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIBAppDelegate.m; sourceTree = "<group>"; };
+		2BA8C5C8186A550D005760AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BA8C5CD186A550E005760AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2BA8C5D3186A550E005760AD /* Idea ZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Idea ZoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA8C5D4186A550E005760AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2BA8C5DC186A550E005760AD /* Idea ZoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Idea ZoneTests-Info.plist"; sourceTree = "<group>"; };
+		2BA8C5DE186A550E005760AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BA8C5E0186A550E005760AD /* Idea_BoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Idea_BoxTests.m; sourceTree = "<group>"; };
+		2BCE0D5B18791BC000B83540 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2BF0971C186BABC600AD681B /* AIBIdeaZonesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZonesViewController.h; sourceTree = "<group>"; };
+		2BF0971D186BABC600AD681B /* AIBIdeaZonesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZonesViewController.m; sourceTree = "<group>"; };
+		4409F7B0277E45588100AAA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8F2605ECA9D5827A0C9B561 /* UIColor+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AIBExtensions.h"; sourceTree = "<group>"; };
+		A8F261299865684C1AB37B0C /* AIBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBViewController.m; sourceTree = "<group>"; };
+		A8F2614952E9A6E547590B4E /* AIBIdeaZoneIdeaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneIdeaTableViewCell.h; sourceTree = "<group>"; };
+		A8F26174E861B279B50E41FA /* AIBIdeaZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZone.h; sourceTree = "<group>"; };
+		A8F261960DF51BF508F1F46F /* UIImage+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AIBExtensions.h"; sourceTree = "<group>"; };
+		A8F2628B2B02E7828B5BE0B6 /* AIBIdeaZoneIdeaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneIdeaTableViewCell.m; sourceTree = "<group>"; };
+		A8F262C15A5F271F33FF1B4B /* NSDate+AIBFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+AIBFormatting.m"; sourceTree = "<group>"; };
+		A8F26306AA4BBDCAB08C563E /* AIBPathViewStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPathViewStates.h; sourceTree = "<group>"; };
+		A8F2630993B54DE5276A71FE /* AIBIdea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdea.h; sourceTree = "<group>"; };
+		A8F2634ED882D3640DAF226D /* AIBIdeaComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaComment.h; sourceTree = "<group>"; };
+		A8F263D6CEB2219025CB8446 /* AIBAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBAnimation.h; sourceTree = "<group>"; };
+		A8F264B9B8AEEE3ADEA5CD70 /* AIBIdeaZoneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneManager.m; sourceTree = "<group>"; };
+		A8F264BEA99B19FFDFD0C4E3 /* AIBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBConstants.h; sourceTree = "<group>"; };
+		A8F264E66A684EE638AB3507 /* AIBIdeaDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaDescriptor.m; sourceTree = "<group>"; };
+		A8F265013A9A6CD71273CD27 /* AIBAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBAnimation.m; sourceTree = "<group>"; };
+		A8F26601C2FD51DF4DEEA375 /* AIBIdeaZonesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZonesTableViewCell.m; sourceTree = "<group>"; };
+		A8F26601E44255C49CFFE465 /* UIImage+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AIBExtensions.m"; sourceTree = "<group>"; };
+		A8F2661216967097172675C7 /* AIBIdeaZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneViewController.h; sourceTree = "<group>"; };
+		A8F2662D5F2412EDBA68CC0D /* AIBIdeaZonesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZonesTableViewCell.h; sourceTree = "<group>"; };
+		A8F2672AFB150869B60D3CA6 /* UINavigationBar+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+AIBExtensions.m"; sourceTree = "<group>"; };
+		A8F2677CDAF7D84B248DF4F6 /* AIBIdeaComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaComment.m; sourceTree = "<group>"; };
+		A8F267E2B486E11CAC5A9F14 /* AIBIdeaZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneViewController.m; sourceTree = "<group>"; };
+		A8F2684414ABC434D4E5D058 /* AIBPathViewStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPathViewStates.m; sourceTree = "<group>"; };
+		A8F2691BCEF68EE09BA2F2AE /* AIBAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBAlerts.h; sourceTree = "<group>"; };
+		A8F26953A91165550D1EE4D7 /* AIBIdeaDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaDescriptor.h; sourceTree = "<group>"; };
+		A8F26A2B254FFC69CB5681FA /* UIColor+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AIBExtensions.m"; sourceTree = "<group>"; };
+		A8F26A48661D1C769F16B582 /* NSDate+AIBFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+AIBFormatting.h"; sourceTree = "<group>"; };
+		A8F26A6A5BCD675CB52AEA3C /* AIBCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBCommentView.h; sourceTree = "<group>"; };
+		A8F26B18FD9CE3F176E2168B /* AIBIdea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdea.m; sourceTree = "<group>"; };
+		A8F26B302038EBB330279E9B /* AIBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBConstants.m; sourceTree = "<group>"; };
+		A8F26B39D523954DBD46F89F /* AIBCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBCommentView.m; sourceTree = "<group>"; };
+		A8F26B770C1F555E76C9487F /* AIBIdeaZoneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneManager.h; sourceTree = "<group>"; };
+		A8F26C28A3F2875D1635463F /* UIScreen+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+AIBExtensions.h"; sourceTree = "<group>"; };
+		A8F26C89CC356A273980AAC3 /* AIBIdeaZoneDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneDescriptor.m; sourceTree = "<group>"; };
+		A8F26CABC12682B949F101A9 /* UINavigationBar+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+AIBExtensions.h"; sourceTree = "<group>"; };
+		A8F26CD4D27473304A141571 /* UIScreen+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+AIBExtensions.m"; sourceTree = "<group>"; };
+		A8F26D8FC6F97311AE81B054 /* AIBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBViewController.h; sourceTree = "<group>"; };
+		A8F26DB1CDBAF3A87078C3CF /* AIBIdeaZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZone.m; sourceTree = "<group>"; };
+		A8F26F45923FDE0DC631B664 /* AIBAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBAlerts.m; sourceTree = "<group>"; };
+		A8F26F4A1700CDD7C6C3B4E7 /* AIBIdeaZoneDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneDescriptor.h; sourceTree = "<group>"; };
+		B382F31E7B494679BC8EB775 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BA8C5AF186A550D005760AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCE0D5C18791BC000B83540 /* MobileCoreServices.framework in Frameworks */,
+				2B03280A1872981D000E9C29 /* MessageUI.framework in Frameworks */,
+				2B35B6D61882504B008A52D8 /* Crashlytics.framework in Frameworks */,
+				2B5363821870C9EA0000290C /* CoreLocation.framework in Frameworks */,
+				2BA8C5B8186A550D005760AD /* CoreGraphics.framework in Frameworks */,
+				2BA8C5BA186A550D005760AD /* UIKit.framework in Frameworks */,
+				2BA8C5B6186A550D005760AD /* Foundation.framework in Frameworks */,
+				A3AF97B74A714AD1A8E0F2C2 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA8C5D0186A550E005760AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA8C5D5186A550E005760AD /* XCTest.framework in Frameworks */,
+				2BA8C5D7186A550E005760AD /* UIKit.framework in Frameworks */,
+				2BA8C5D6186A550E005760AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BA8C5A9186A550D005760AD = {
+			isa = PBXGroup;
+			children = (
+				2BA8C5BB186A550D005760AD /* Idea Box */,
+				2BA8C5DA186A550E005760AD /* Idea BoxTests */,
+				2BA8C5B4186A550D005760AD /* Frameworks */,
+				2BA8C5B3186A550D005760AD /* Products */,
+				B382F31E7B494679BC8EB775 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		2BA8C5B3186A550D005760AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BA8C5B2186A550D005760AD /* Idea Zone.app */,
+				2BA8C5D3186A550E005760AD /* Idea ZoneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BA8C5B4186A550D005760AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B35B6D51882504B008A52D8 /* Crashlytics.framework */,
+				2BCE0D5B18791BC000B83540 /* MobileCoreServices.framework */,
+				2B0328091872981D000E9C29 /* MessageUI.framework */,
+				2B5363811870C9EA0000290C /* CoreLocation.framework */,
+				2BA8C5B5186A550D005760AD /* Foundation.framework */,
+				2BA8C5B7186A550D005760AD /* CoreGraphics.framework */,
+				2BA8C5B9186A550D005760AD /* UIKit.framework */,
+				2BA8C5D4186A550E005760AD /* XCTest.framework */,
+				4409F7B0277E45588100AAA7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BA8C5BB186A550D005760AD /* Idea Box */ = {
+			isa = PBXGroup;
+			children = (
+				2BA8C5C4186A550D005760AD /* AIBAppDelegate.h */,
+				2BA8C5C5186A550D005760AD /* AIBAppDelegate.m */,
+				2BA8C5C7186A550D005760AD /* Main.storyboard */,
+				2BA8C5CD186A550E005760AD /* Images.xcassets */,
+				2BA8C5BC186A550D005760AD /* Supporting Files */,
+				A8F2605DF497A99A3C5B8111 /* View Controllers */,
+				A8F2672859CD3D9B7E7285DA /* Support */,
+				A8F26E9D89C34F3F641017C0 /* Models */,
+				A8F268F9EA09045428383AB3 /* Views */,
+			);
+			path = "Idea Box";
+			sourceTree = "<group>";
+		};
+		2BA8C5BC186A550D005760AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BA8C5BD186A550D005760AD /* Idea Zone-Info.plist */,
+				2BA8C5BE186A550D005760AD /* InfoPlist.strings */,
+				2BA8C5C1186A550D005760AD /* main.m */,
+				2BA8C5C3186A550D005760AD /* Idea Zone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BA8C5DA186A550E005760AD /* Idea BoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BA8C5E0186A550E005760AD /* Idea_BoxTests.m */,
+				2BA8C5DB186A550E005760AD /* Supporting Files */,
+			);
+			path = "Idea BoxTests";
+			sourceTree = "<group>";
+		};
+		2BA8C5DB186A550E005760AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BA8C5DC186A550E005760AD /* Idea ZoneTests-Info.plist */,
+				2BA8C5DD186A550E005760AD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8F2605DF497A99A3C5B8111 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BF0971C186BABC600AD681B /* AIBIdeaZonesViewController.h */,
+				2BF0971D186BABC600AD681B /* AIBIdeaZonesViewController.m */,
+				A8F2661216967097172675C7 /* AIBIdeaZoneViewController.h */,
+				A8F267E2B486E11CAC5A9F14 /* AIBIdeaZoneViewController.m */,
+				2B0BBDBA186F7C8A00EF0B6E /* AIBCreateIdeaViewController.h */,
+				2B0BBDBB186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m */,
+				2B5363831870E4960000290C /* AIBIdeaCommentController.h */,
+				2B5363841870E4960000290C /* AIBIdeaCommentController.m */,
+				2B53173B187221360032F502 /* AIBConfigureIdeaZoneViewController.h */,
+				2B53173C187221360032F502 /* AIBConfigureIdeaZoneViewController.m */,
+				2B03280B187349F1000E9C29 /* AIBIdeaViewController.h */,
+				2B03280C187349F1000E9C29 /* AIBIdeaViewController.m */,
+				A8F261299865684C1AB37B0C /* AIBViewController.m */,
+				A8F26D8FC6F97311AE81B054 /* AIBViewController.h */,
+				2B21848F1881DEC3002B09A0 /* AIBEditIdeaViewController.h */,
+				2B2184901881DEC3002B09A0 /* AIBEditIdeaViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A8F26478519C52211B99E36A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A8F2605ECA9D5827A0C9B561 /* UIColor+AIBExtensions.h */,
+				A8F26A48661D1C769F16B582 /* NSDate+AIBFormatting.h */,
+				A8F262C15A5F271F33FF1B4B /* NSDate+AIBFormatting.m */,
+				A8F26A2B254FFC69CB5681FA /* UIColor+AIBExtensions.m */,
+				A8F2672AFB150869B60D3CA6 /* UINavigationBar+AIBExtensions.m */,
+				A8F26CABC12682B949F101A9 /* UINavigationBar+AIBExtensions.h */,
+				A8F26601E44255C49CFFE465 /* UIImage+AIBExtensions.m */,
+				A8F261960DF51BF508F1F46F /* UIImage+AIBExtensions.h */,
+				A8F26CD4D27473304A141571 /* UIScreen+AIBExtensions.m */,
+				A8F26C28A3F2875D1635463F /* UIScreen+AIBExtensions.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A8F2672859CD3D9B7E7285DA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A8F264BEA99B19FFDFD0C4E3 /* AIBConstants.h */,
+				A8F26B302038EBB330279E9B /* AIBConstants.m */,
+				A8F265013A9A6CD71273CD27 /* AIBAnimation.m */,
+				A8F263D6CEB2219025CB8446 /* AIBAnimation.h */,
+				A8F26F45923FDE0DC631B664 /* AIBAlerts.m */,
+				A8F2691BCEF68EE09BA2F2AE /* AIBAlerts.h */,
+				A8F26478519C52211B99E36A /* Categories */,
+			);
+			name = Support;
+			path = "../../Idea Box";
+			sourceTree = "<group>";
+		};
+		A8F268F9EA09045428383AB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8F26B39D523954DBD46F89F /* AIBCommentView.m */,
+				A8F26A6A5BCD675CB52AEA3C /* AIBCommentView.h */,
+				A8F2628B2B02E7828B5BE0B6 /* AIBIdeaZoneIdeaTableViewCell.m */,
+				A8F2614952E9A6E547590B4E /* AIBIdeaZoneIdeaTableViewCell.h */,
+				A8F26601C2FD51DF4DEEA375 /* AIBIdeaZonesTableViewCell.m */,
+				A8F2662D5F2412EDBA68CC0D /* AIBIdeaZonesTableViewCell.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8F26E9D89C34F3F641017C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8F264B9B8AEEE3ADEA5CD70 /* AIBIdeaZoneManager.m */,
+				A8F26B770C1F555E76C9487F /* AIBIdeaZoneManager.h */,
+				A8F26C89CC356A273980AAC3 /* AIBIdeaZoneDescriptor.m */,
+				A8F26F4A1700CDD7C6C3B4E7 /* AIBIdeaZoneDescriptor.h */,
+				A8F264E66A684EE638AB3507 /* AIBIdeaDescriptor.m */,
+				A8F26953A91165550D1EE4D7 /* AIBIdeaDescriptor.h */,
+				A8F26B18FD9CE3F176E2168B /* AIBIdea.m */,
+				A8F2630993B54DE5276A71FE /* AIBIdea.h */,
+				A8F2677CDAF7D84B248DF4F6 /* AIBIdeaComment.m */,
+				A8F2634ED882D3640DAF226D /* AIBIdeaComment.h */,
+				A8F26DB1CDBAF3A87078C3CF /* AIBIdeaZone.m */,
+				A8F26174E861B279B50E41FA /* AIBIdeaZone.h */,
+				A8F2684414ABC434D4E5D058 /* AIBPathViewStates.m */,
+				A8F26306AA4BBDCAB08C563E /* AIBPathViewStates.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BA8C5B1186A550D005760AD /* Idea Zone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA8C5E4186A550E005760AD /* Build configuration list for PBXNativeTarget "Idea Zone" */;
+			buildPhases = (
+				FA7310BD701A439ABBA51CE7 /* Check Pods Manifest.lock */,
+				2BA8C5AE186A550D005760AD /* Sources */,
+				2BA8C5AF186A550D005760AD /* Frameworks */,
+				2BA8C5B0186A550D005760AD /* Resources */,
+				E999BAA44C1B4596B2B33C54 /* Copy Pods Resources */,
+				2B35B6D41882502B008A52D8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Idea Zone";
+			productName = "Idea Box";
+			productReference = 2BA8C5B2186A550D005760AD /* Idea Zone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BA8C5D2186A550E005760AD /* Idea ZoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA8C5E7186A550E005760AD /* Build configuration list for PBXNativeTarget "Idea ZoneTests" */;
+			buildPhases = (
+				2BA8C5CF186A550E005760AD /* Sources */,
+				2BA8C5D0186A550E005760AD /* Frameworks */,
+				2BA8C5D1186A550E005760AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA8C5D9186A550E005760AD /* PBXTargetDependency */,
+			);
+			name = "Idea ZoneTests";
+			productName = "Idea BoxTests";
+			productReference = 2BA8C5D3186A550E005760AD /* Idea ZoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BA8C5AA186A550D005760AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AIB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Thomas Dimson";
+				TargetAttributes = {
+					2BA8C5B1186A550D005760AD = {
+						DevelopmentTeam = 32VHBV272C;
+					};
+					2BA8C5D2186A550E005760AD = {
+						TestTargetID = 2BA8C5B1186A550D005760AD;
+					};
+				};
+			};
+			buildConfigurationList = 2BA8C5AD186A550D005760AD /* Build configuration list for PBXProject "Idea Zone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BA8C5A9186A550D005760AD;
+			productRefGroup = 2BA8C5B3186A550D005760AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BA8C5B1186A550D005760AD /* Idea Zone */,
+				2BA8C5D2186A550E005760AD /* Idea ZoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BA8C5B0186A550D005760AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA8C5CE186A550E005760AD /* Images.xcassets in Resources */,
+				2BA8C5C0186A550D005760AD /* InfoPlist.strings in Resources */,
+				2BA8C5C9186A550D005760AD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA8C5D1186A550E005760AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA8C5DF186A550E005760AD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B35B6D41882502B008A52D8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run b534034b7dbf3e257d748532a3a0865599e88704";
+		};
+		E999BAA44C1B4596B2B33C54 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA7310BD701A439ABBA51CE7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BA8C5AE186A550D005760AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF0971E186BABC600AD681B /* AIBIdeaZonesViewController.m in Sources */,
+				2BA8C5C2186A550D005760AD /* main.m in Sources */,
+				2B0BBDBC186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m in Sources */,
+				2B03280D187349F1000E9C29 /* AIBIdeaViewController.m in Sources */,
+				2B53173D187221360032F502 /* AIBConfigureIdeaZoneViewController.m in Sources */,
+				2BA8C5C6186A550D005760AD /* AIBAppDelegate.m in Sources */,
+				A8F262390ED40CB65BA5F3F6 /* AIBConstants.m in Sources */,
+				A8F268716A26E4C01F29261A /* AIBAnimation.m in Sources */,
+				A8F265A67421797B48B069D6 /* AIBIdeaZoneManager.m in Sources */,
+				A8F26B9C5CFF84C69FB2890B /* AIBIdeaZoneDescriptor.m in Sources */,
+				A8F2686EB8AEF4EADB1AACBD /* AIBIdeaDescriptor.m in Sources */,
+				A8F26A416517070A2D19D0D1 /* AIBIdeaZoneViewController.m in Sources */,
+				2B5363851870E4960000290C /* AIBIdeaCommentController.m in Sources */,
+				A8F265D5D4AD9F32E259F485 /* AIBAlerts.m in Sources */,
+				A8F26045EC9F5C6CAEAC8721 /* AIBIdea.m in Sources */,
+				A8F2679FE5A15676EF2C088A /* AIBIdeaComment.m in Sources */,
+				A8F26D0C3E5B29F0921FFB28 /* AIBCommentView.m in Sources */,
+				A8F26373AD2DB28A38843B62 /* AIBIdeaZoneIdeaTableViewCell.m in Sources */,
+				A8F267626A5364D0D832B868 /* AIBIdeaZonesTableViewCell.m in Sources */,
+				A8F2628CDFFD5139A75C7F16 /* NSDate+AIBFormatting.m in Sources */,
+				A8F268D8EE80807232B86803 /* UIColor+AIBExtensions.m in Sources */,
+				2B2184911881DEC3002B09A0 /* AIBEditIdeaViewController.m in Sources */,
+				A8F2604E76FFFF5A1AFDAC13 /* UINavigationBar+AIBExtensions.m in Sources */,
+				A8F26CA1006E39FA5609E2AA /* UIImage+AIBExtensions.m in Sources */,
+				A8F26FC222DE1D55E42E13FF /* AIBIdeaZone.m in Sources */,
+				A8F26249DBFECB69B47A8F85 /* AIBViewController.m in Sources */,
+				A8F26904983A8F9760140B35 /* AIBPathViewStates.m in Sources */,
+				A8F26C4C3BF5DFEFDEE4437A /* UIScreen+AIBExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA8C5CF186A550E005760AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA8C5E1186A550E005760AD /* Idea_BoxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BA8C5D9186A550E005760AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA8C5B1186A550D005760AD /* Idea Zone */;
+			targetProxy = 2BA8C5D8186A550E005760AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BA8C5BE186A550D005760AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA8C5BF186A550D005760AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2BA8C5C7186A550D005760AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA8C5C8186A550D005760AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BA8C5DD186A550E005760AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA8C5DE186A550E005760AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BA8C5E2186A550E005760AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BA8C5E3186A550E005760AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BA8C5E5186A550E005760AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B382F31E7B494679BC8EB775 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tdimson/personal/Idea\\ Box",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Idea Box/Idea Zone-Prefix.pch";
+				INFOPLIST_FILE = "Idea Box/Idea Zone-Info.plist";
+				PRODUCT_NAME = "Idea Zone";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2BA8C5E6186A550E005760AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B382F31E7B494679BC8EB775 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tdimson/personal/Idea\\ Box",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Idea Box/Idea Zone-Prefix.pch";
+				INFOPLIST_FILE = "Idea Box/Idea Zone-Info.plist";
+				PRODUCT_NAME = "Idea Zone";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2BA8C5E8186A550E005760AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Idea Box.app/Idea Box";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Idea Box/Idea Box-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Idea BoxTests/Idea ZoneTests-Info.plist";
+				PRODUCT_NAME = "Idea ZoneTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2BA8C5E9186A550E005760AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Idea Box.app/Idea Box";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Idea Box/Idea Box-Prefix.pch";
+				INFOPLIST_FILE = "Idea BoxTests/Idea ZoneTests-Info.plist";
+				PRODUCT_NAME = "Idea ZoneTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BA8C5AD186A550D005760AD /* Build configuration list for PBXProject "Idea Zone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA8C5E2186A550E005760AD /* Debug */,
+				2BA8C5E3186A550E005760AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA8C5E4186A550E005760AD /* Build configuration list for PBXNativeTarget "Idea Zone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA8C5E5186A550E005760AD /* Debug */,
+				2BA8C5E6186A550E005760AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA8C5E7186A550E005760AD /* Build configuration list for PBXNativeTarget "Idea ZoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA8C5E8186A550E005760AD /* Debug */,
+				2BA8C5E9186A550E005760AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BA8C5AA186A550D005760AD /* Project object */;
+}
