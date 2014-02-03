@@ -9,6 +9,7 @@
 #import "AIBAppDelegate.h"
 #import "AIBConstants.h"
 #import "Dropbox/Dropbox.h"
+#import "Appirater.h"
 //#import <TestFlight.h>
 #import <Crashlytics/Crashlytics.h>
 
@@ -36,6 +37,11 @@
     [DBAccountManager setSharedManager:accountManager];
     //[TestFlight takeOff:kAIBTestflightApiKey];
     [Crashlytics startWithAPIKey:kAIBCrashlyticsKey];
+    [Appirater setAppId:kAIBAppStoreId];
+    [Appirater setDaysUntilPrompt:1];
+    [Appirater setUsesUntilPrompt:7];
+    [Appirater setTimeBeforeReminding:2];
+    [Appirater appLaunched:YES];
     return YES;
 }
 							
@@ -51,9 +57,8 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

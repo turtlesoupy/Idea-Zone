@@ -15,6 +15,7 @@ extern NSString * const kAIBDropboxApiSecret;
 extern NSString * const kAIBTestflightApiKey;
 extern NSString * const kAIBDropboxOpenURLOccurred;
 extern NSString * const kAIBCrashlyticsKey;
+extern NSString * const kAIBAppStoreId;
 
 @interface AIBConstants : NSObject
 @end
