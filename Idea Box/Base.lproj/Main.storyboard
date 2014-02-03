@@ -16,14 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShitBulb" translatesAutoresizingMaskIntoConstraints="NO" id="rHl-jt-hAE">
-                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dt-Bx-7oQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="8bC-Lc-GHl"/>
-                                    <constraint firstAttribute="height" constant="320" id="R9J-1J-x19"/>
+                                    <constraint firstAttribute="height" constant="568" id="9l4-QO-i4w"/>
+                                    <constraint firstAttribute="width" constant="320" id="SK5-rS-G5V"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="ShitBulb">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectDropboxButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M4N-gr-EEH"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSh-fl-Pza">
                                 <rect key="frame" x="56" y="522" width="209" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,14 +45,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="rHl-jt-hAE" secondAttribute="centerY" id="6CA-eZ-Rzw"/>
-                            <constraint firstAttribute="centerX" secondItem="rHl-jt-hAE" secondAttribute="centerX" id="NdX-hK-w3v"/>
                             <constraint firstItem="5Fg-VR-9WM" firstAttribute="top" secondItem="xSh-fl-Pza" secondAttribute="bottom" constant="20" symbolic="YES" id="WDA-ZK-xng"/>
+                            <constraint firstAttribute="centerX" secondItem="3Dt-Bx-7oQ" secondAttribute="centerX" id="Y5M-bn-869"/>
                             <constraint firstAttribute="centerX" secondItem="xSh-fl-Pza" secondAttribute="centerX" id="pwz-Q3-76v"/>
+                            <constraint firstAttribute="centerY" secondItem="3Dt-Bx-7oQ" secondAttribute="centerY" id="rB1-QP-eVA"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="connectDropboxButton" destination="xSh-fl-Pza" id="PlB-5j-CBM"/>
                         <segue destination="5lb-6v-kA3" kind="modal" identifier="PresentMainTableView" modalTransitionStyle="flipHorizontal" id="x0l-cm-YX3"/>
                         <segue destination="5lb-6v-kA3" kind="modal" identifier="PresentMainTableViewNoAnimate" animates="NO" id="4ny-nv-fDo"/>
                     </connections>
@@ -228,7 +236,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Collboration" footerTitle="Allows you to collaborate using Dropbox's 'Shared Folders' feature." id="KqW-be-Mcu">
+                            <tableViewSection headerTitle="Collaboration" footerTitle="Allows you to collaborate using Dropbox's 'Shared Folders' feature." id="KqW-be-Mcu">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="OHX-aA-h8J" style="IBUITableViewCellStyleDefault" id="4lk-bw-dxx">
                                         <rect key="frame" x="0.0" y="211" width="320" height="44"/>
@@ -563,7 +571,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ShitBulb" width="640" height="586"/>
+        <image name="ShitBulb" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

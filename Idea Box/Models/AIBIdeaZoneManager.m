@@ -430,6 +430,15 @@ static NSString * const  kDataStoreIdeaZoneMetadata = @"IdeaZones";
         return nil;
     }
 
+    if(!text || [text length] == 0) {
+        if(srcError) {
+            *srcError = [[DBError alloc] initWithDomain:@"IdeaZone" code:100 userInfo:@{
+                            NSLocalizedDescriptionKey:[NSString stringWithFormat:@"Empty document %@!", [[[descriptor info] path] stringValue]]
+            }];
+        }
+        return nil;
+    }
+
     return [[AIBIdea alloc] initFromDocument:text descriptor:descriptor];
 }
 

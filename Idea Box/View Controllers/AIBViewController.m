@@ -15,6 +15,7 @@
 
 @interface AIBViewController ()
 - (IBAction)connectDropboxButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *connectDropboxButton;
 
 @end
 
@@ -40,6 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    _connectDropboxButton.alpha = 0.0;
     _errorLabel.hidden = YES;
 
 }
@@ -47,6 +49,9 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self performSignIn];
+    [UIView animateWithDuration:0.3 delay:0.5 options:0 animations:^{
+        _connectDropboxButton.alpha = 1.0;
+    } completion:nil];
 }
 
 - (void) performSignIn {

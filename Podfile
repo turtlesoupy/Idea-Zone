@@ -1,6 +1,7 @@
 platform :ios, '7.0'
 
-pod 'Dropbox-Sync-API-SDK', '~> 2.0.3'
+#pod 'Dropbox-Sync-API-SDK', '~> 2.1.0'
+pod 'Dropbox-Sync-API-SDK', :podspec => 'DropboxSyncNew.podspec'
 pod 'UIAlertView+Blocks', '~> 0.7'
 pod 'libextobjc/EXTScope', '~> 0.3'
 #pod 'TestFlightSDK', '~> 2.2.0-noadid-beta'

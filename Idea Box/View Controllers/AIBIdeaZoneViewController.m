@@ -42,13 +42,21 @@
     [self setTitle:[_ideaZone name]];
     [[self tableView] setRowHeight:[AIBIdeaZoneIdeaTableViewCell cellHeight]];
     [[self tableView] registerClass:[AIBIdeaZoneIdeaTableViewCell class] forCellReuseIdentifier:@"IdeaCell"];
+
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self setRefreshControl:refreshControl];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
-
     [[[self navigationController] navigationBar] tintForZone:_ideaZone];
+    [self refresh];
+}
+
+- (void) refresh {
+    __block BOOL loadingCancelled = NO;
+
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         DBError *error;
@@ -57,13 +65,24 @@
             return [[[desc2 info] modifiedTime] compare:[[desc1 info] modifiedTime]];
         }];
 
-        if(error) {
+        if(self && [self isViewLoaded] && [[self view] window] && [[self navigationController] topViewController] == self) {
             [AIBAlerts showErrorAlert:error];
         } else {
+            loadingCancelled = YES;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[self tableView] reloadData];
+                [[self refreshControl] endRefreshing];
             });
         }
+    });
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        if(loadingCancelled) {
+            return;
+        }
+
+        [[self tableView] setContentOffset:CGPointMake(0, -self.topLayoutGuide.length) animated:YES];
+        [[self refreshControl] beginRefreshing];
     });
 }
 

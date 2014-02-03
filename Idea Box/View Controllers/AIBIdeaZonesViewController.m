@@ -20,13 +20,14 @@
 
 @implementation AIBIdeaZonesViewController {
     NSArray *_zones;
+    BOOL _signingOut;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        _signingOut = NO;
     }
     return self;
 }
@@ -62,7 +63,7 @@
         DBError *error;
         NSArray *zones = [[AIBIdeaZoneManager sharedInstance] zones:&error];
         if(error) {
-            if(self) {
+            if(self && [self isViewLoaded] && [[self view] window] && [[self navigationController] topViewController] == self && !_signingOut) {
                 [AIBAlerts showErrorAlert:error];
             }
         } else {
@@ -105,6 +106,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([indexPath row] >= [_zones count]) {
+        NSLog(@"Bad state: asked for an idea zone beyond the index");
+        return nil;
+    }
+
     AIBIdeaZoneDescriptor *zone = _zones[(NSUInteger) [indexPath row]];
     AIBIdeaZonesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IdeaZoneCell"];
     [cell setIdeaZone:zone];
@@ -154,6 +160,7 @@
     [UIAlertView showWithTitle:@"Sign Out?" message:@"Are you sure you want to sign out?" cancelButtonTitle:@"No"
              otherButtonTitles:@[@"Yes"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
         if(buttonIndex > 0) {
+            _signingOut = YES;
             [self performSegueWithIdentifier:@"SignOutSegue" sender:self];
         }
     }];
