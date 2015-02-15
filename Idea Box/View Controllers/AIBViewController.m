@@ -10,12 +10,14 @@
 #import "AIBAnimation.h"
 #import "AIBIdeaZoneManager.h"
 #import "AIBConstants.h"
+#import "UIImage+AIBExtensions.h"
 #import <Dropbox/Dropbox.h>
 #import <EXTScope.h>
 
 @interface AIBViewController ()
 - (IBAction)connectDropboxButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *connectDropboxButton;
+@property (weak, nonatomic) IBOutlet UIButton *splashButton;
 
 @end
 
@@ -41,9 +43,21 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    [_splashButton setImage:[UIImage launchImage] forState:UIControlStateNormal];
     _connectDropboxButton.alpha = 0.0;
     _errorLabel.hidden = YES;
 
+
+}
+
+- (void) viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    _connectDropboxButton.translatesAutoresizingMaskIntoConstraints = YES;
+    
+    CGFloat regionStart = ([UIScreen mainScreen].bounds.size.height / 2 + 175);
+    _connectDropboxButton.frame = CGRectMake(0, regionStart + ([UIScreen mainScreen].bounds.size.height - regionStart - 30) / 2,
+                                             [UIScreen mainScreen].bounds.size.width, 30);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -53,6 +67,16 @@
         _connectDropboxButton.alpha = 1.0;
     } completion:nil];
 }
+
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 
 - (void) performSignIn {
     if (![self isViewLoaded ]|| ![[self view] window]) {

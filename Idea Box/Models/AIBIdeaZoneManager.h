@@ -44,6 +44,8 @@ typedef void (^UIImageBlock_t)(UIImage *);
 
 - (void)deleteIdea:(AIBIdeaDescriptor *)descriptor error:(DBError **)srcError;
 
+- (void)deleteIdeaZone:(AIBIdeaZoneDescriptor *)descriptor error:(DBError **)srcError;
+
 - (void)setImageViewFromPath:(DBPath *)path imageView:(UIImageView *)imageView;
 
 - (void)imageFromPath:(DBPath *)path callback:(UIImageBlock_t)callback;

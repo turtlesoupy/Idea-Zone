@@ -65,7 +65,7 @@
             return [[[desc2 info] modifiedTime] compare:[[desc1 info] modifiedTime]];
         }];
 
-        if(self && [self isViewLoaded] && [[self view] window] && [[self navigationController] topViewController] == self) {
+        if(error && self && [self isViewLoaded] && [[self view] window] && [[self navigationController] topViewController] == self) {
             [AIBAlerts showErrorAlert:error];
         } else {
             loadingCancelled = YES;
@@ -76,7 +76,7 @@
         }
     });
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.50 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         if(loadingCancelled) {
             return;
         }
@@ -110,8 +110,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AIBIdeaDescriptor *ideaDescriptor = _ideas[(NSUInteger) [indexPath row]];
     AIBIdeaZoneIdeaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IdeaCell"];
+    cell.frame = CGRectMake(0, cell.frame.origin.y, self.view.bounds.size.width, cell.frame.size.height);
     [cell setIdeaDescriptor:ideaDescriptor];
-    cell.containingTableView = tableView;
     [cell setDelegate:self];
     return cell;
 }
@@ -159,6 +159,9 @@
         [UIAlertView showWithTitle:@"Confirm" message:[NSString stringWithFormat:@"Really delete '%@'?", [idea name]]
                  cancelButtonTitle:@"No" otherButtonTitles:@[@"Yes"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
             @strongify(self)
+            if(!self) {
+                return;
+            }
             if(buttonIndex > 0) {
                 DBError *error;
                 [[AIBIdeaZoneManager sharedInstance] deleteIdea:idea error:&error];

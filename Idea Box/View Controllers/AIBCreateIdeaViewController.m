@@ -38,15 +38,6 @@
     return self;
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    if(UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
-        _bottomConstraint.constant = 162;
-    } else {
-        _bottomConstraint.constant = 216;
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     _actionButtonContainer.alpha = 0.0;
@@ -65,6 +56,20 @@
     [super viewDidAppear:animated];
     [_mainTextView setDelegate:self];
     [_mainTextView becomeFirstResponder];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
@@ -100,6 +105,11 @@
 
 #pragma mark - Event Handlers
 
+- (void) keyboardDidShow:(NSNotification *)notification {
+    CGSize kbSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    _bottomConstraint.constant = kbSize.height;
+}
+
 - (IBAction)cancelButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
@@ -131,6 +141,7 @@
     if(error) {
         [AIBAlerts showErrorAlert:error];
     } else {
+        
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
 }

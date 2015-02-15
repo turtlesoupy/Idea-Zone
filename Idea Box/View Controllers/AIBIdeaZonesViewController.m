@@ -15,11 +15,12 @@
 #import "AIBIdeaZonesTableViewCell.h"
 #import "UINavigationBar+AIBExtensions.h"
 #import "AIBPathViewStates.h"
+#import "MBProgressHUD.h"
 #import <Dropbox/Dropbox.h>
 #import <EXTScope.h>
 
 @implementation AIBIdeaZonesViewController {
-    NSArray *_zones;
+    NSMutableArray *_zones;
     BOOL _signingOut;
 }
 
@@ -38,43 +39,62 @@
 }
 
 - (void) viewDidLoad {
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [super viewDidLoad];
     if([[AIBIdeaZoneManager sharedInstance] completedInitialSync]) {
-        [refreshControl setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Refresh zones"]];
-    } else {
-        [refreshControl setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Initial sync may take a few minutes"]];
+        [self loadRefreshControl];
     }
-    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void) loadRefreshControl {
+    if(self.refreshControl) {
+        return;
+    }
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl setAttributedTitle:[[NSAttributedString  alloc] initWithString:@"Refresh zones"]];
     [self setRefreshControl:refreshControl];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _zones = @[];
+    _zones = [@[] mutableCopy];
     [[[self navigationController] navigationBar] resetTints];
     [self refresh];
 }
 
 - (void) refresh {
     __block BOOL loadingCancelled = NO;
+    
+    if(![[AIBIdeaZoneManager sharedInstance] completedInitialSync]) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication] delegate].window
+ animated:YES];
+        hud.labelText = @"Initializing from Dropbox";
+        hud.detailsLabelText = @"(may take a few minutes)";
+    }
+    
     @weakify(self)
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         @strongify(self)
         DBError *error;
         NSArray *zones = [[AIBIdeaZoneManager sharedInstance] zones:&error];
-        if(error) {
-            if(self && [self isViewLoaded] && [[self view] window] && [[self navigationController] topViewController] == self && !_signingOut) {
-                [AIBAlerts showErrorAlert:error];
-            }
-        } else {
-            loadingCancelled = YES;
-            dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:[[UIApplication sharedApplication] delegate].window animated:YES];
+            [self loadRefreshControl];
+            if(error) {
+                if(self && [self isViewLoaded] && [[self view] window] && [[self navigationController] topViewController] == self && !_signingOut) {
+                    [AIBAlerts showErrorAlert:error];
+                }
+            } else {
+                loadingCancelled = YES;
+               
                 self->_zones = zones;
                 [[self refreshControl] setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Refresh zones"]];
                 [[self tableView] reloadData];
                 [[self refreshControl] endRefreshing];
-            });
-        }
+                
+              
+            }
+        });
     });
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.6 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
@@ -86,12 +106,6 @@
         [[self refreshControl] beginRefreshing];
     });
 
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -114,6 +128,7 @@
     AIBIdeaZoneDescriptor *zone = _zones[(NSUInteger) [indexPath row]];
     AIBIdeaZonesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IdeaZoneCell"];
     [cell setIdeaZone:zone];
+    [cell setDelegate:self];
     return cell;
 }
 

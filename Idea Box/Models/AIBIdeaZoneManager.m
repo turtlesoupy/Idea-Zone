@@ -67,7 +67,7 @@ static NSString * const  kDataStoreIdeaZoneMetadata = @"IdeaZones";
 
     [filesystem createFolder:[self rootIdeaPath] error:&error];
     if(error) {
-        if([error code] != DBErrorParamsExists) {
+        if([error code] != DBErrorExists) {
             return error;
         }
     }
@@ -255,11 +255,14 @@ static NSString * const  kDataStoreIdeaZoneMetadata = @"IdeaZones";
                 AIBLog(@"Error warming %@: %@", [info path], error);
             } else if(file.status.cached) {
 
-            } else {
+            } else if (file.isOpen) {
                 AIBLog(@"Warming %@", [info path]);
                 [file readHandle:&error];
             }
-            [file close];
+            
+            if(file.isOpen) {
+                [file close];
+            }
         }
     }
 }
@@ -354,7 +357,9 @@ static NSString * const  kDataStoreIdeaZoneMetadata = @"IdeaZones";
                 if(!readError && idea) {
                     [descriptor setNumComments:[[idea comments] count]];
                 }
-            } else{
+            } else if (readError) {
+                NSLog(@"Error reading %@: %@", info, readError);
+            } else {
                 [file close];
             }
         }
@@ -379,7 +384,12 @@ static NSString * const  kDataStoreIdeaZoneMetadata = @"IdeaZones";
     }
 
     [file writeString:[idea asDocument] error:&error];
-    [file close];
+    if(!error) {
+        [[self pathViewStates] markViewed:[file info] sync:NO];
+    }
+    if(file.isOpen) {
+        [file close];
+    }
 
     if(error) {
         if(srcError) {
@@ -402,7 +412,13 @@ static NSString * const  kDataStoreIdeaZoneMetadata = @"IdeaZones";
 
     [file writeString:[idea asDocument] error:&error];
     [[idea descriptor] setInfo:[file info]];
-    [file close];
+    if(!error) {
+      [[self pathViewStates] markViewed:[file info] sync:NO];
+    }
+    if(file.isOpen) {
+        [file close];
+    }
+
 
     if(error) {
         if(srcError) {
@@ -569,6 +585,14 @@ static NSString * const  kDataStoreIdeaZoneMetadata = @"IdeaZones";
 - (void)deleteIdea:(AIBIdeaDescriptor *)descriptor error:(DBError **)srcError {
     DBError *error;
     [[DBFilesystem sharedFilesystem] deletePath:[[descriptor info] path] error:&error];
+    if(error && srcError) {
+        *srcError = error;
+    }
+}
+
+- (void)deleteIdeaZone:(AIBIdeaZoneDescriptor *)descriptor error:(DBError **)srcError {
+    DBError *error;
+    [[DBFilesystem sharedFilesystem] deletePath:[[descriptor fileInfo] path] error:&error];
     if(error && srcError) {
         *srcError = error;
     }

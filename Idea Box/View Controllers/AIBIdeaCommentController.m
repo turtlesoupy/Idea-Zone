@@ -42,18 +42,21 @@
     [super viewDidAppear:animated];
     [_mainTextView setDelegate:self];
     [_mainTextView becomeFirstResponder];
-
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    if(UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
-        _bottomSpacing.constant = 162;
-    } else {
-        _bottomSpacing.constant = 216;
-    }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillShowNotification object:nil];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -65,6 +68,11 @@
     [UIView animateWithDuration:0.2 delay:0.35 options:(UIViewAnimationOptions) 0 animations:^{
         _cancelSaveToolbar.alpha = 1.0;
     } completion:nil];
+}
+
+- (void) keyboardDidShow:(NSNotification *)notification {
+    CGSize kbSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    _bottomSpacing.constant = kbSize.height;
 }
 
 - (IBAction)cancelPressed:(id)sender {

@@ -11,10 +11,17 @@
 		2B03280D187349F1000E9C29 /* AIBIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03280C187349F1000E9C29 /* AIBIdeaViewController.m */; };
 		2B0BBDBC186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BBDBB186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m */; };
 		2B2184911881DEC3002B09A0 /* AIBEditIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2184901881DEC3002B09A0 /* AIBEditIdeaViewController.m */; };
-		2B35B6D61882504B008A52D8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B35B6D51882504B008A52D8 /* Crashlytics.framework */; };
 		2B53173D187221360032F502 /* AIBConfigureIdeaZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B53173C187221360032F502 /* AIBConfigureIdeaZoneViewController.m */; };
 		2B5363821870C9EA0000290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5363811870C9EA0000290C /* CoreLocation.framework */; };
 		2B5363851870E4960000290C /* AIBIdeaCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5363841870E4960000290C /* AIBIdeaCommentController.m */; };
+		2B5D869D1A906ABC00B71FE3 /* AIBAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D86981A906ABC00B71FE3 /* AIBAlerts.m */; };
+		2B5D869E1A906ABC00B71FE3 /* AIBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D869A1A906ABC00B71FE3 /* AIBAnimation.m */; };
+		2B5D869F1A906ABC00B71FE3 /* AIBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D869C1A906ABC00B71FE3 /* AIBConstants.m */; };
+		2B5D86AB1A906CAC00B71FE3 /* NSDate+AIBFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D86A21A906CAC00B71FE3 /* NSDate+AIBFormatting.m */; };
+		2B5D86AC1A906CAC00B71FE3 /* UIColor+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D86A41A906CAC00B71FE3 /* UIColor+AIBExtensions.m */; };
+		2B5D86AD1A906CAC00B71FE3 /* UIImage+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D86A61A906CAC00B71FE3 /* UIImage+AIBExtensions.m */; };
+		2B5D86AE1A906CAC00B71FE3 /* UINavigationBar+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D86A81A906CAC00B71FE3 /* UINavigationBar+AIBExtensions.m */; };
+		2B5D86AF1A906CAC00B71FE3 /* UIScreen+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D86AA1A906CAC00B71FE3 /* UIScreen+AIBExtensions.m */; };
 		2BA8C5B6186A550D005760AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B5186A550D005760AD /* Foundation.framework */; };
 		2BA8C5B8186A550D005760AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B7186A550D005760AD /* CoreGraphics.framework */; };
 		2BA8C5BA186A550D005760AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA8C5B9186A550D005760AD /* UIKit.framework */; };
@@ -32,23 +39,15 @@
 		2BF0971E186BABC600AD681B /* AIBIdeaZonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0971D186BABC600AD681B /* AIBIdeaZonesViewController.m */; };
 		A3AF97B74A714AD1A8E0F2C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4409F7B0277E45588100AAA7 /* libPods.a */; };
 		A8F26045EC9F5C6CAEAC8721 /* AIBIdea.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26B18FD9CE3F176E2168B /* AIBIdea.m */; };
-		A8F2604E76FFFF5A1AFDAC13 /* UINavigationBar+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2672AFB150869B60D3CA6 /* UINavigationBar+AIBExtensions.m */; };
-		A8F262390ED40CB65BA5F3F6 /* AIBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26B302038EBB330279E9B /* AIBConstants.m */; };
 		A8F26249DBFECB69B47A8F85 /* AIBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F261299865684C1AB37B0C /* AIBViewController.m */; };
-		A8F2628CDFFD5139A75C7F16 /* NSDate+AIBFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F262C15A5F271F33FF1B4B /* NSDate+AIBFormatting.m */; };
 		A8F26373AD2DB28A38843B62 /* AIBIdeaZoneIdeaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2628B2B02E7828B5BE0B6 /* AIBIdeaZoneIdeaTableViewCell.m */; };
 		A8F265A67421797B48B069D6 /* AIBIdeaZoneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F264B9B8AEEE3ADEA5CD70 /* AIBIdeaZoneManager.m */; };
-		A8F265D5D4AD9F32E259F485 /* AIBAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26F45923FDE0DC631B664 /* AIBAlerts.m */; };
 		A8F267626A5364D0D832B868 /* AIBIdeaZonesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26601C2FD51DF4DEEA375 /* AIBIdeaZonesTableViewCell.m */; };
 		A8F2679FE5A15676EF2C088A /* AIBIdeaComment.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2677CDAF7D84B248DF4F6 /* AIBIdeaComment.m */; };
 		A8F2686EB8AEF4EADB1AACBD /* AIBIdeaDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F264E66A684EE638AB3507 /* AIBIdeaDescriptor.m */; };
-		A8F268716A26E4C01F29261A /* AIBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F265013A9A6CD71273CD27 /* AIBAnimation.m */; };
-		A8F268D8EE80807232B86803 /* UIColor+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26A2B254FFC69CB5681FA /* UIColor+AIBExtensions.m */; };
 		A8F26904983A8F9760140B35 /* AIBPathViewStates.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2684414ABC434D4E5D058 /* AIBPathViewStates.m */; };
 		A8F26A416517070A2D19D0D1 /* AIBIdeaZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F267E2B486E11CAC5A9F14 /* AIBIdeaZoneViewController.m */; };
 		A8F26B9C5CFF84C69FB2890B /* AIBIdeaZoneDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26C89CC356A273980AAC3 /* AIBIdeaZoneDescriptor.m */; };
-		A8F26C4C3BF5DFEFDEE4437A /* UIScreen+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26CD4D27473304A141571 /* UIScreen+AIBExtensions.m */; };
-		A8F26CA1006E39FA5609E2AA /* UIImage+AIBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26601E44255C49CFFE465 /* UIImage+AIBExtensions.m */; };
 		A8F26D0C3E5B29F0921FFB28 /* AIBCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26B39D523954DBD46F89F /* AIBCommentView.m */; };
 		A8F26FC222DE1D55E42E13FF /* AIBIdeaZone.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F26DB1CDBAF3A87078C3CF /* AIBIdeaZone.m */; };
 /* End PBXBuildFile section */
@@ -71,12 +70,27 @@
 		2B0BBDBB186F7C8A00EF0B6E /* AIBCreateIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBCreateIdeaViewController.m; sourceTree = "<group>"; };
 		2B21848F1881DEC3002B09A0 /* AIBEditIdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBEditIdeaViewController.h; sourceTree = "<group>"; };
 		2B2184901881DEC3002B09A0 /* AIBEditIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBEditIdeaViewController.m; sourceTree = "<group>"; };
-		2B35B6D51882504B008A52D8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		2B53173B187221360032F502 /* AIBConfigureIdeaZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBConfigureIdeaZoneViewController.h; sourceTree = "<group>"; };
 		2B53173C187221360032F502 /* AIBConfigureIdeaZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBConfigureIdeaZoneViewController.m; sourceTree = "<group>"; };
 		2B5363811870C9EA0000290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2B5363831870E4960000290C /* AIBIdeaCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaCommentController.h; sourceTree = "<group>"; };
 		2B5363841870E4960000290C /* AIBIdeaCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaCommentController.m; sourceTree = "<group>"; };
+		2B5D86971A906ABB00B71FE3 /* AIBAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIBAlerts.h; path = "Idea Box/AIBAlerts.h"; sourceTree = SOURCE_ROOT; };
+		2B5D86981A906ABC00B71FE3 /* AIBAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIBAlerts.m; path = "Idea Box/AIBAlerts.m"; sourceTree = SOURCE_ROOT; };
+		2B5D86991A906ABC00B71FE3 /* AIBAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIBAnimation.h; path = "Idea Box/AIBAnimation.h"; sourceTree = SOURCE_ROOT; };
+		2B5D869A1A906ABC00B71FE3 /* AIBAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIBAnimation.m; path = "Idea Box/AIBAnimation.m"; sourceTree = SOURCE_ROOT; };
+		2B5D869B1A906ABC00B71FE3 /* AIBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIBConstants.h; path = "Idea Box/AIBConstants.h"; sourceTree = SOURCE_ROOT; };
+		2B5D869C1A906ABC00B71FE3 /* AIBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIBConstants.m; path = "Idea Box/AIBConstants.m"; sourceTree = SOURCE_ROOT; };
+		2B5D86A11A906CAC00B71FE3 /* NSDate+AIBFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+AIBFormatting.h"; sourceTree = "<group>"; };
+		2B5D86A21A906CAC00B71FE3 /* NSDate+AIBFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+AIBFormatting.m"; sourceTree = "<group>"; };
+		2B5D86A31A906CAC00B71FE3 /* UIColor+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AIBExtensions.h"; sourceTree = "<group>"; };
+		2B5D86A41A906CAC00B71FE3 /* UIColor+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AIBExtensions.m"; sourceTree = "<group>"; };
+		2B5D86A51A906CAC00B71FE3 /* UIImage+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AIBExtensions.h"; sourceTree = "<group>"; };
+		2B5D86A61A906CAC00B71FE3 /* UIImage+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AIBExtensions.m"; sourceTree = "<group>"; };
+		2B5D86A71A906CAC00B71FE3 /* UINavigationBar+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+AIBExtensions.h"; sourceTree = "<group>"; };
+		2B5D86A81A906CAC00B71FE3 /* UINavigationBar+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+AIBExtensions.m"; sourceTree = "<group>"; };
+		2B5D86A91A906CAC00B71FE3 /* UIScreen+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+AIBExtensions.h"; sourceTree = "<group>"; };
+		2B5D86AA1A906CAC00B71FE3 /* UIScreen+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+AIBExtensions.m"; sourceTree = "<group>"; };
 		2BA8C5B2186A550D005760AD /* Idea Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Idea Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA8C5B5186A550D005760AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2BA8C5B7186A550D005760AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,47 +112,32 @@
 		2BF0971C186BABC600AD681B /* AIBIdeaZonesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZonesViewController.h; sourceTree = "<group>"; };
 		2BF0971D186BABC600AD681B /* AIBIdeaZonesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZonesViewController.m; sourceTree = "<group>"; };
 		4409F7B0277E45588100AAA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8F2605ECA9D5827A0C9B561 /* UIColor+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AIBExtensions.h"; sourceTree = "<group>"; };
+		942D1A024B8BDFC2050FD7F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F261299865684C1AB37B0C /* AIBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBViewController.m; sourceTree = "<group>"; };
 		A8F2614952E9A6E547590B4E /* AIBIdeaZoneIdeaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneIdeaTableViewCell.h; sourceTree = "<group>"; };
 		A8F26174E861B279B50E41FA /* AIBIdeaZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZone.h; sourceTree = "<group>"; };
-		A8F261960DF51BF508F1F46F /* UIImage+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AIBExtensions.h"; sourceTree = "<group>"; };
 		A8F2628B2B02E7828B5BE0B6 /* AIBIdeaZoneIdeaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneIdeaTableViewCell.m; sourceTree = "<group>"; };
-		A8F262C15A5F271F33FF1B4B /* NSDate+AIBFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+AIBFormatting.m"; sourceTree = "<group>"; };
 		A8F26306AA4BBDCAB08C563E /* AIBPathViewStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPathViewStates.h; sourceTree = "<group>"; };
 		A8F2630993B54DE5276A71FE /* AIBIdea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdea.h; sourceTree = "<group>"; };
 		A8F2634ED882D3640DAF226D /* AIBIdeaComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaComment.h; sourceTree = "<group>"; };
-		A8F263D6CEB2219025CB8446 /* AIBAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBAnimation.h; sourceTree = "<group>"; };
 		A8F264B9B8AEEE3ADEA5CD70 /* AIBIdeaZoneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneManager.m; sourceTree = "<group>"; };
-		A8F264BEA99B19FFDFD0C4E3 /* AIBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBConstants.h; sourceTree = "<group>"; };
 		A8F264E66A684EE638AB3507 /* AIBIdeaDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaDescriptor.m; sourceTree = "<group>"; };
-		A8F265013A9A6CD71273CD27 /* AIBAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBAnimation.m; sourceTree = "<group>"; };
 		A8F26601C2FD51DF4DEEA375 /* AIBIdeaZonesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZonesTableViewCell.m; sourceTree = "<group>"; };
-		A8F26601E44255C49CFFE465 /* UIImage+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AIBExtensions.m"; sourceTree = "<group>"; };
 		A8F2661216967097172675C7 /* AIBIdeaZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneViewController.h; sourceTree = "<group>"; };
 		A8F2662D5F2412EDBA68CC0D /* AIBIdeaZonesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZonesTableViewCell.h; sourceTree = "<group>"; };
-		A8F2672AFB150869B60D3CA6 /* UINavigationBar+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+AIBExtensions.m"; sourceTree = "<group>"; };
 		A8F2677CDAF7D84B248DF4F6 /* AIBIdeaComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaComment.m; sourceTree = "<group>"; };
 		A8F267E2B486E11CAC5A9F14 /* AIBIdeaZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneViewController.m; sourceTree = "<group>"; };
 		A8F2684414ABC434D4E5D058 /* AIBPathViewStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPathViewStates.m; sourceTree = "<group>"; };
-		A8F2691BCEF68EE09BA2F2AE /* AIBAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBAlerts.h; sourceTree = "<group>"; };
 		A8F26953A91165550D1EE4D7 /* AIBIdeaDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaDescriptor.h; sourceTree = "<group>"; };
-		A8F26A2B254FFC69CB5681FA /* UIColor+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AIBExtensions.m"; sourceTree = "<group>"; };
-		A8F26A48661D1C769F16B582 /* NSDate+AIBFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+AIBFormatting.h"; sourceTree = "<group>"; };
 		A8F26A6A5BCD675CB52AEA3C /* AIBCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBCommentView.h; sourceTree = "<group>"; };
 		A8F26B18FD9CE3F176E2168B /* AIBIdea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdea.m; sourceTree = "<group>"; };
-		A8F26B302038EBB330279E9B /* AIBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBConstants.m; sourceTree = "<group>"; };
 		A8F26B39D523954DBD46F89F /* AIBCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBCommentView.m; sourceTree = "<group>"; };
 		A8F26B770C1F555E76C9487F /* AIBIdeaZoneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneManager.h; sourceTree = "<group>"; };
-		A8F26C28A3F2875D1635463F /* UIScreen+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+AIBExtensions.h"; sourceTree = "<group>"; };
 		A8F26C89CC356A273980AAC3 /* AIBIdeaZoneDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZoneDescriptor.m; sourceTree = "<group>"; };
-		A8F26CABC12682B949F101A9 /* UINavigationBar+AIBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+AIBExtensions.h"; sourceTree = "<group>"; };
-		A8F26CD4D27473304A141571 /* UIScreen+AIBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+AIBExtensions.m"; sourceTree = "<group>"; };
 		A8F26D8FC6F97311AE81B054 /* AIBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBViewController.h; sourceTree = "<group>"; };
 		A8F26DB1CDBAF3A87078C3CF /* AIBIdeaZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBIdeaZone.m; sourceTree = "<group>"; };
-		A8F26F45923FDE0DC631B664 /* AIBAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBAlerts.m; sourceTree = "<group>"; };
 		A8F26F4A1700CDD7C6C3B4E7 /* AIBIdeaZoneDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBIdeaZoneDescriptor.h; sourceTree = "<group>"; };
-		B382F31E7B494679BC8EB775 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		FFAF0053AA31CF33E9D1450C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +147,6 @@
 			files = (
 				2BCE0D5C18791BC000B83540 /* MobileCoreServices.framework in Frameworks */,
 				2B03280A1872981D000E9C29 /* MessageUI.framework in Frameworks */,
-				2B35B6D61882504B008A52D8 /* Crashlytics.framework in Frameworks */,
 				2B5363821870C9EA0000290C /* CoreLocation.framework in Frameworks */,
 				2BA8C5B8186A550D005760AD /* CoreGraphics.framework in Frameworks */,
 				2BA8C5BA186A550D005760AD /* UIKit.framework in Frameworks */,
@@ -170,6 +168,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B5D86A01A906CAC00B71FE3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D86A11A906CAC00B71FE3 /* NSDate+AIBFormatting.h */,
+				2B5D86A21A906CAC00B71FE3 /* NSDate+AIBFormatting.m */,
+				2B5D86A31A906CAC00B71FE3 /* UIColor+AIBExtensions.h */,
+				2B5D86A41A906CAC00B71FE3 /* UIColor+AIBExtensions.m */,
+				2B5D86A51A906CAC00B71FE3 /* UIImage+AIBExtensions.h */,
+				2B5D86A61A906CAC00B71FE3 /* UIImage+AIBExtensions.m */,
+				2B5D86A71A906CAC00B71FE3 /* UINavigationBar+AIBExtensions.h */,
+				2B5D86A81A906CAC00B71FE3 /* UINavigationBar+AIBExtensions.m */,
+				2B5D86A91A906CAC00B71FE3 /* UIScreen+AIBExtensions.h */,
+				2B5D86AA1A906CAC00B71FE3 /* UIScreen+AIBExtensions.m */,
+			);
+			name = Categories;
+			path = "Idea Box/Categories";
+			sourceTree = SOURCE_ROOT;
+		};
 		2BA8C5A9186A550D005760AD = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +193,7 @@
 				2BA8C5DA186A550E005760AD /* Idea BoxTests */,
 				2BA8C5B4186A550D005760AD /* Frameworks */,
 				2BA8C5B3186A550D005760AD /* Products */,
-				B382F31E7B494679BC8EB775 /* Pods.xcconfig */,
+				FDF8B751E1F5F6295FCAA5E3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,7 +209,6 @@
 		2BA8C5B4186A550D005760AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B35B6D51882504B008A52D8 /* Crashlytics.framework */,
 				2BCE0D5B18791BC000B83540 /* MobileCoreServices.framework */,
 				2B0328091872981D000E9C29 /* MessageUI.framework */,
 				2B5363811870C9EA0000290C /* CoreLocation.framework */,
@@ -274,33 +289,16 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		A8F26478519C52211B99E36A /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				A8F2605ECA9D5827A0C9B561 /* UIColor+AIBExtensions.h */,
-				A8F26A48661D1C769F16B582 /* NSDate+AIBFormatting.h */,
-				A8F262C15A5F271F33FF1B4B /* NSDate+AIBFormatting.m */,
-				A8F26A2B254FFC69CB5681FA /* UIColor+AIBExtensions.m */,
-				A8F2672AFB150869B60D3CA6 /* UINavigationBar+AIBExtensions.m */,
-				A8F26CABC12682B949F101A9 /* UINavigationBar+AIBExtensions.h */,
-				A8F26601E44255C49CFFE465 /* UIImage+AIBExtensions.m */,
-				A8F261960DF51BF508F1F46F /* UIImage+AIBExtensions.h */,
-				A8F26CD4D27473304A141571 /* UIScreen+AIBExtensions.m */,
-				A8F26C28A3F2875D1635463F /* UIScreen+AIBExtensions.h */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		A8F2672859CD3D9B7E7285DA /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				A8F264BEA99B19FFDFD0C4E3 /* AIBConstants.h */,
-				A8F26B302038EBB330279E9B /* AIBConstants.m */,
-				A8F265013A9A6CD71273CD27 /* AIBAnimation.m */,
-				A8F263D6CEB2219025CB8446 /* AIBAnimation.h */,
-				A8F26F45923FDE0DC631B664 /* AIBAlerts.m */,
-				A8F2691BCEF68EE09BA2F2AE /* AIBAlerts.h */,
-				A8F26478519C52211B99E36A /* Categories */,
+				2B5D86A01A906CAC00B71FE3 /* Categories */,
+				2B5D86971A906ABB00B71FE3 /* AIBAlerts.h */,
+				2B5D86981A906ABC00B71FE3 /* AIBAlerts.m */,
+				2B5D86991A906ABC00B71FE3 /* AIBAnimation.h */,
+				2B5D869A1A906ABC00B71FE3 /* AIBAnimation.m */,
+				2B5D869B1A906ABC00B71FE3 /* AIBConstants.h */,
+				2B5D869C1A906ABC00B71FE3 /* AIBConstants.m */,
 			);
 			name = Support;
 			path = "../../Idea Box";
@@ -338,6 +336,15 @@
 				A8F26306AA4BBDCAB08C563E /* AIBPathViewStates.h */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FDF8B751E1F5F6295FCAA5E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				942D1A024B8BDFC2050FD7F1 /* Pods.debug.xcconfig */,
+				FFAF0053AA31CF33E9D1450C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,7 +395,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AIB;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Thomas Dimson";
 				TargetAttributes = {
 					2BA8C5B1186A550D005760AD = {
@@ -451,7 +458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run b534034b7dbf3e257d748532a3a0865599e88704";
+			shellScript = "./Pods/CrashlyticsFramework/Crashlytics.framework/run b534034b7dbf3e257d748532a3a0865599e88704";
 		};
 		E999BAA44C1B4596B2B33C54 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -465,7 +472,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA7310BD701A439ABBA51CE7 /* Check Pods Manifest.lock */ = {
@@ -496,28 +503,28 @@
 				2B03280D187349F1000E9C29 /* AIBIdeaViewController.m in Sources */,
 				2B53173D187221360032F502 /* AIBConfigureIdeaZoneViewController.m in Sources */,
 				2BA8C5C6186A550D005760AD /* AIBAppDelegate.m in Sources */,
-				A8F262390ED40CB65BA5F3F6 /* AIBConstants.m in Sources */,
-				A8F268716A26E4C01F29261A /* AIBAnimation.m in Sources */,
 				A8F265A67421797B48B069D6 /* AIBIdeaZoneManager.m in Sources */,
 				A8F26B9C5CFF84C69FB2890B /* AIBIdeaZoneDescriptor.m in Sources */,
 				A8F2686EB8AEF4EADB1AACBD /* AIBIdeaDescriptor.m in Sources */,
 				A8F26A416517070A2D19D0D1 /* AIBIdeaZoneViewController.m in Sources */,
+				2B5D86AB1A906CAC00B71FE3 /* NSDate+AIBFormatting.m in Sources */,
 				2B5363851870E4960000290C /* AIBIdeaCommentController.m in Sources */,
-				A8F265D5D4AD9F32E259F485 /* AIBAlerts.m in Sources */,
+				2B5D86AD1A906CAC00B71FE3 /* UIImage+AIBExtensions.m in Sources */,
 				A8F26045EC9F5C6CAEAC8721 /* AIBIdea.m in Sources */,
+				2B5D869E1A906ABC00B71FE3 /* AIBAnimation.m in Sources */,
 				A8F2679FE5A15676EF2C088A /* AIBIdeaComment.m in Sources */,
+				2B5D86AF1A906CAC00B71FE3 /* UIScreen+AIBExtensions.m in Sources */,
+				2B5D869F1A906ABC00B71FE3 /* AIBConstants.m in Sources */,
 				A8F26D0C3E5B29F0921FFB28 /* AIBCommentView.m in Sources */,
+				2B5D86AE1A906CAC00B71FE3 /* UINavigationBar+AIBExtensions.m in Sources */,
 				A8F26373AD2DB28A38843B62 /* AIBIdeaZoneIdeaTableViewCell.m in Sources */,
 				A8F267626A5364D0D832B868 /* AIBIdeaZonesTableViewCell.m in Sources */,
-				A8F2628CDFFD5139A75C7F16 /* NSDate+AIBFormatting.m in Sources */,
-				A8F268D8EE80807232B86803 /* UIColor+AIBExtensions.m in Sources */,
 				2B2184911881DEC3002B09A0 /* AIBEditIdeaViewController.m in Sources */,
-				A8F2604E76FFFF5A1AFDAC13 /* UINavigationBar+AIBExtensions.m in Sources */,
-				A8F26CA1006E39FA5609E2AA /* UIImage+AIBExtensions.m in Sources */,
 				A8F26FC222DE1D55E42E13FF /* AIBIdeaZone.m in Sources */,
 				A8F26249DBFECB69B47A8F85 /* AIBViewController.m in Sources */,
+				2B5D86AC1A906CAC00B71FE3 /* UIColor+AIBExtensions.m in Sources */,
 				A8F26904983A8F9760140B35 /* AIBPathViewStates.m in Sources */,
-				A8F26C4C3BF5DFEFDEE4437A /* UIScreen+AIBExtensions.m in Sources */,
+				2B5D869D1A906ABC00B71FE3 /* AIBAlerts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,7 +578,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -610,7 +616,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -641,8 +646,9 @@
 		};
 		2BA8C5E5186A550E005760AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B382F31E7B494679BC8EB775 /* Pods.xcconfig */;
+			baseConfigurationReference = 942D1A024B8BDFC2050FD7F1 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -653,6 +659,19 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Idea Box/Idea Zone-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Appirater\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaSecurity\"",
+					"\"${PODS_ROOT}/Headers/Public/Dropbox-Sync-API-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/NYXImagesKit\"",
+					"\"${PODS_ROOT}/Headers/Public/SWTableViewCell\"",
+					"\"${PODS_ROOT}/Headers/Public/UIAlertView+Blocks\"",
+					"\"${PODS_ROOT}/Headers/Public/libextobjc\"",
+					"${PROJECT_DIR}/Idea\\ Box",
+					"${PROJECT_DIR}",
+					"${PROJECT_DIR}/Categories",
+				);
 				INFOPLIST_FILE = "Idea Box/Idea Zone-Info.plist";
 				PRODUCT_NAME = "Idea Zone";
 				PROVISIONING_PROFILE = "";
@@ -663,8 +682,9 @@
 		};
 		2BA8C5E6186A550E005760AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B382F31E7B494679BC8EB775 /* Pods.xcconfig */;
+			baseConfigurationReference = FFAF0053AA31CF33E9D1450C /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -675,6 +695,19 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Idea Box/Idea Zone-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Appirater\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaSecurity\"",
+					"\"${PODS_ROOT}/Headers/Public/Dropbox-Sync-API-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/NYXImagesKit\"",
+					"\"${PODS_ROOT}/Headers/Public/SWTableViewCell\"",
+					"\"${PODS_ROOT}/Headers/Public/UIAlertView+Blocks\"",
+					"\"${PODS_ROOT}/Headers/Public/libextobjc\"",
+					"${PROJECT_DIR}/Idea\\ Box",
+					"${PROJECT_DIR}",
+					"${PROJECT_DIR}/Categories",
+				);
 				INFOPLIST_FILE = "Idea Box/Idea Zone-Info.plist";
 				PRODUCT_NAME = "Idea Zone";
 				PROVISIONING_PROFILE = "";
@@ -686,7 +719,6 @@
 		2BA8C5E8186A550E005760AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Idea Box.app/Idea Box";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -709,7 +741,6 @@
 		2BA8C5E9186A550E005760AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Idea Box.app/Idea Box";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

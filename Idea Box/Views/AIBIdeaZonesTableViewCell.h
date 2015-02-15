@@ -4,9 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SWTableViewCell.h"
 
 @class AIBIdeaZoneDescriptor;
 
-@interface AIBIdeaZonesTableViewCell : UITableViewCell
+@interface AIBIdeaZonesTableViewCell : SWTableViewCell
++ (CGFloat) cellHeight;
 - (void)setIdeaZone:(AIBIdeaZoneDescriptor *)ideaZone;
 @end

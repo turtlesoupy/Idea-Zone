@@ -11,4 +11,6 @@
 - (UIImage *)imageFlippedHorizontal;
 
 - (UIImage *)imageMaskWithColor:(UIColor *)maskColor;
+
++ (UIImage *)launchImage;
 @end

@@ -36,18 +36,29 @@
     [_mainTextView setDelegate:self];
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    if(UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
-        _bottomConstraint.constant = 162;
-    } else {
-        _bottomConstraint.constant = 216;
-    }
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [_mainTextView becomeFirstResponder];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+- (void) keyboardDidShow:(NSNotification *)notification {
+    CGSize kbSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    _bottomConstraint.constant = kbSize.height;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {

@@ -11,13 +11,15 @@
 #import <Dropbox/Dropbox.h>
 #import "NSMutableArray+SWUtilityButtons.m"
 
-static CGFloat const kButtonThreshold = 80;
+@interface SWTableViewCell(Private)
+- (UIScrollView *) cellScrollView;
+@end
 
 @implementation AIBIdeaZoneIdeaTableViewCell {
 }
 
 + (CGFloat) cellHeight {
-   return 77.0f;
+    return 77;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -27,29 +29,15 @@ static CGFloat const kButtonThreshold = 80;
                                          title:@"Rename"];
     [rightUtility sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
                                          title:@"Delete"];
-    if((self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier containingTableView:nil leftUtilityButtons:nil rightUtilityButtons:rightUtility])) {
-        [self setCellHeight:[[self class] cellHeight]];
-
+    if((self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier])) {
+        self.rightUtilityButtons = rightUtility;
         UIImageView *disclosureIndicator = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Disclosure"]];
         [disclosureIndicator setTag:1111];
-        [[self cellScrollView] addSubview:disclosureIndicator];
+        if([self respondsToSelector:@selector(cellScrollView)]) {
+            [[self cellScrollView] addSubview:disclosureIndicator];
+        }
+        
     }
-    return self;
-
-    if((self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier])) {
-        NSMutableArray *rightUtility = [[NSMutableArray alloc] init];
-        [rightUtility sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                             title:@"Rename"];
-        [rightUtility sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                                    title:@"Delete"];
-        self.rightUtilityButtons = rightUtility;
-        NSMutableArray *leftUtility = [[NSMutableArray alloc] init];
-        [leftUtility sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                             title:@"Delete"];
-        self.leftUtilityButtons = leftUtility;
-        [self setCellHeight:[[self class] cellHeight]];
-    }
-
     return self;
 }
 
@@ -59,7 +47,7 @@ static CGFloat const kButtonThreshold = 80;
             [self viewWithTag:1111].bounds.size.width, [self viewWithTag:1111].bounds.size.height)];
     NSString *text = [[[descriptor info] modifiedTime] distanceOfTimeInWords];
     if([descriptor numComments] > 0) {
-        text = [text stringByAppendingFormat:@" · %d comment%@", [descriptor numComments], [descriptor numComments] == 1 ? @"" : @"s"];
+        text = [text stringByAppendingFormat:@" · %d comment%@", (int)[descriptor numComments], [descriptor numComments] == 1 ? @"" : @"s"];
     }
     [[self detailTextLabel] setText:text];
     if([[[AIBIdeaZoneManager sharedInstance] pathViewStates] pathWasUpdated:[descriptor info] error:nil]) {

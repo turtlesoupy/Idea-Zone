@@ -17,6 +17,6 @@
 @property(nonatomic, copy) NSString *name;
 @property(nonatomic, strong) DBFileInfo *fileInfo;
 @property(nonatomic, strong) UIColor *color;
-@property(nonatomic) int numIdeas;
+@property(nonatomic) NSUInteger numIdeas;
 @property(nonatomic) BOOL anyUpdated;
 @end
