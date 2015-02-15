@@ -52,6 +52,7 @@
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl setAttributedTitle:[[NSAttributedString  alloc] initWithString:@"Refresh zones"]];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     [self setRefreshControl:refreshControl];
 }
 
@@ -76,7 +77,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         @strongify(self)
         DBError *error;
-        NSArray *zones = [[AIBIdeaZoneManager sharedInstance] zones:&error];
+        NSMutableArray *zones = [[[AIBIdeaZoneManager sharedInstance] zones:&error] mutableCopy];
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:[[UIApplication sharedApplication] delegate].window animated:YES];
             [self loadRefreshControl];
@@ -128,7 +129,6 @@
     AIBIdeaZoneDescriptor *zone = _zones[(NSUInteger) [indexPath row]];
     AIBIdeaZonesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IdeaZoneCell"];
     [cell setIdeaZone:zone];
-    [cell setDelegate:self];
     return cell;
 }
 
